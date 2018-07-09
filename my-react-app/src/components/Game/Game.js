@@ -7,7 +7,6 @@ import Footer from "../Footer";
 
 class Game extends Component {
   
-
   componentDidMount() {
     this.setState({ data: this.shuffleData(this.state.data) });
   }
