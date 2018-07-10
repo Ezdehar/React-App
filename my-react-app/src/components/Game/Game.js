@@ -1,12 +1,18 @@
 import React, { Component } from "react";
-import Nav from "../Nav";
-import Header from "../Header";
-import Container from "../Container";
-import ClickItem from "../ClickItem";
-import Footer from "../Footer";
+import Nav from "/Users/ezdeharjaber/Documents/cwru/React-App/my-react-app/src/components/Nav/Nav.js";
+import Header from "/Users/ezdeharjaber/Documents/cwru/React-App/my-react-app/src/components/Header/Header.js";
+import Container from "/Users/ezdeharjaber/Documents/cwru/React-App/my-react-app/src/components/Container/Container.js";
+import ClickItem from "/Users/ezdeharjaber/Documents/cwru/React-App/my-react-app/src/components/ClickItem/ClickItem.js";
+import Footer from "/Users/ezdeharjaber/Documents/cwru/React-App/my-react-app/src/components/Footer/Footer.js";
+import data from "/Users/ezdeharjaber/Documents/cwru/React-App/my-react-app/src/data.json";
 
 class Game extends Component {
-  
+  state = {
+    data,
+    score: 0,
+    topScore: 0
+  };
+
   componentDidMount() {
     this.setState({ data: this.shuffleData(this.state.data) });
   }
@@ -86,3 +92,5 @@ class Game extends Component {
 }
 
 export default Game;
+
+

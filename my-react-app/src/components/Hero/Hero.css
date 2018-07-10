@@ -1,33 +1,43 @@
-.hero {
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  display: block;
-  opacity: .4;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: black;
-}
-
-.hero * {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1, .hero h2 {
+.navbar {
+  background: #5133a4;
+  min-height: 70px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   color: white;
+  font-size: calc(10px + (24 - 10) * (100vw - 320px) / (1200 - 400));
+  z-index: 99;
+  white-space: nowrap;
 }
 
-.hero h1 {
-  font-size: 60px;
-  padding-top: 140px;
-  margin-top: 0;
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 26px 0px;
+  width: 33.3%;
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+}
+
+@media (max-width: 420px) {
+  .navbar li:first-child {
+    width: 25%;
+  }
+
+  .navbar li:nth-child(2) {
+    width: 35%;
+  }
+
+  .navbar li:last-child {
+    width: 40%;
+  }
 }
